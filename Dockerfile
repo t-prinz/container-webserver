@@ -14,4 +14,6 @@ ONBUILD COPY files/ /var/www/html
 
 EXPOSE 8080
 
+USER apache
+
 CMD /usr/sbin/httpd -D FOREGROUND
