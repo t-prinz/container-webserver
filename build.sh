@@ -4,7 +4,7 @@
 
 if [ -x podman ]
 then
-  DOCKER=podman
+  DOCKER="podman --format docker"
 else
   DOCKER=docker
 fi
