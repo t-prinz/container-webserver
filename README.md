@@ -24,4 +24,6 @@ docker stop mywebsvr
 The parent image can be deployed to OpenShift by running the following:
 
 oc new-app --name mywebsvr https://github.com/t-prinz/container-webserver.git --strategy docker --context-dir test
-oc expose svc/websvr
+oc expose svc/mywebsvr
+curl http://`oc get route mywebsvr -o jsonpath='{.spec.host}{"\n"}'`
+oc delete all -l app=mywebsvr
