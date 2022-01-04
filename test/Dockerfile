@@ -1,3 +1,3 @@
-FROM quay.io.tprinz/websvr
+FROM docker.io/tprinz/websvr
 
 LABEL maintainer="Trey Prinz"
