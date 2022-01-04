@@ -2,7 +2,7 @@ FROM registry.access.redhat.com/ubi8
 
 LABEL maintainer="Trey Prinz"
 
-ENV PORT=8000 \
+ENV PORT=8080 \
     WORKING_DIR=/web-app
 
 RUN yum module install -y python39 && \
@@ -22,4 +22,4 @@ USER 1001
 
 WORKDIR ${WORKING_DIR}
 
-CMD python3 -m http.server
+CMD python3 -m http.server ${PORT}
