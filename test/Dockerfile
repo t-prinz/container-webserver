@@ -1,3 +1,3 @@
-FROM quay.io.tprinz/webwvr
+FROM quay.io.tprinz/websvr
 
 LABEL maintainer="Trey Prinz"
